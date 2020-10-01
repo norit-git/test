@@ -1,0 +1,386 @@
+/* .tes{
+  margin: 0 -500%;
+  padding: 20px 500% 20px;
+  background: #FFCB00;
+}
+.event_bnr-wrap{
+  width: 90%;
+  margin: 0 auto;
+}
+.event_bnr{
+  width: 30%;
+  float: left;
+}
+.event_bnr img{
+  width: 100%;
+  border: 10px solid #E44601;
+  border-radius: 5px;
+}
+.event_bnr-center{
+  margin: 0 5%;
+}
+.image-menu_text{
+  padding: 34px 0;
+} */
+
+/* 200918追加＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.section_container > .teke-heading-lv2 {
+  width: auto;
+  font-size: 1.6em;
+}
+
+.section_container > .str-takeout-img > ul {
+display: flex;
+justify-content: space-between;
+padding: 10px 20px;
+list-style: none;
+width: 100%;
+box-sizing: border-box;
+}
+
+.section_container > .str-takeout-img > ul > li:nth-child(odd) {
+  width: 60%;
+}
+.section_container > .str-takeout-img > ul > li:nth-child(even) {
+  width: 5%;
+  position: relative;
+}
+
+.section_container > .str-takeout-img > ul > li > img {
+  width: 100%;
+}
+
+.img-arrow {
+width: 0;
+height: 0;
+border-left: 1rem solid #e9331d;
+border-top: 1rem solid transparent;
+border-bottom: 1rem solid transparent;
+/* margin-top: 80px; */
+/* width: 100%; */
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+
+}
+
+.section_container > .str-qr-img {
+display: flex;
+}
+
+.section_container > .str-qr-img > img.example　{
+margin: 20px;
+}
+
+.section_container > .str-qrWrapper {
+display: flex;
+justify-content: space-between;
+/* padding: 50px 20px; */
+padding: 10px 20px;
+box-sizing: border-box;
+}
+
+.str-qr-txt > .str-qr-txt-p {
+/* line-height: 50px; */
+text-align: left;
+margin: 0;
+line-height: 2;
+font-size: 16px;
+}
+
+.qrcode-img {
+margin: 15px;
+}
+
+.qr-img-caption {
+text-align: center;
+}
+
+
+.memu_qr-wrap{
+  width: 35%;
+  max-width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_qr_ios,
+.menu_qr_android{
+  width: 45%;
+}
+.menu_qr_ios img,
+.menu_qr_android img{
+  width: 100%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.menu_qr_ios p,
+.menu_qr_android p{
+  font-size: 13px;
+  margin: 10px 0 0 !important;
+  /* margin-bottom: 0 !important; */
+}
+
+.str-qr-txt{
+  width: 62%;
+}
+
+#appreach-box {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .memu_qr-wrap {
+    display: none;
+  }
+
+  .section_container > .str-takeout-img  {
+    margin: 0 auto;
+  }
+
+  .section_container > .str-takeout-img > ul {
+  display: block;
+  }
+  .section_container > .str-takeout-img > ul > li {
+  margin: 50px auto;
+  }
+
+  .section_container > .str-takeout-img > ul > li:nth-child(even) {
+    width: 5%;
+    position: relative;
+  }
+  .section_container > .str-takeout-img > ul > li:nth-child(odd) {
+    width: 50%;
+  }
+  .img-arrow {
+    width: 0;
+    height: 0;
+    border-left: 1rem solid #e9331d;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    position: absolute;
+    top: -25px;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform:rotate(90deg);
+transform-origin:0 0;
+    
+    }
+
+    .section_container > .str-qrWrapper  {
+     flex-direction: column-reverse;
+     margin: auto;
+    }
+
+    .memu_qr-wrap {
+      margin: 40px auto;
+    }
+
+    .str-qr-txt {
+      margin: 0 auto;
+    }
+
+    #appreach-box {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .appreach-links {
+      display: flex;
+      justify-content: center;
+    }
+
+    #appreach-itunes-link {
+      margin: 10px;
+    }
+
+    #appreach-gplay-link {
+      margin: 10px;
+    }
+}
+
+/* 200918追加ここまで＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.overwhite02 > img{
+  transition: all 0.3s ease-out;
+}
+.overwhite02 > img:hover{
+  opacity: 0.8;
+}
+
+.top_bnr-wrap{
+  margin: 0 -500%;
+  padding: 50px 500%;
+  background: #FFCB00;
+}
+.top_bnr-inner{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.top_bnr{
+  width: 200px;
+  border: 5px solid #E44601;
+}
+.top_bnr img{
+  width: 100%;
+}
+
+/* メニュー＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.menu-list{
+  width: 300px !important;
+  padding: 0 10px !important;
+}
+.menu-wrap{
+  width: 1280px;
+  margin: 20px auto 0;
+}
+.caption02{
+  margin-top: -30px;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .menu-wrap{
+    width: 960px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .menu-wrap{
+    width: 640px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu-list{
+    width: 90% !important;
+    padding: 0 !important;
+    margin: 0 auto;
+    float: none !important;
+  }
+  .menu-wrap{
+    width: 100%;
+  }
+}
+
+
+/* メニューここまで＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+@media screen and (max-width: 500px) {
+  .event_bnr{
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .event_bnr img{
+    /* width: 100%; */
+    border: 5px solid #E44601;
+    margin-left: -5px;
+  }
+
+  .event_bnr-center{
+    margin: 15px 0;
+  }
+
+  .image-menu_text{
+    width: 90% !important;
+    margin: 0 auto;
+  }
+
+}
+
+.price-small{
+  font-size: 0.5em;
+}
+
+/* 4月20日追加＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.top_info-wrap{
+  width: 100%;
+}
+.top_info-wrap > img{
+  width: 96%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+
+
+/* トップスライド＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.top_slider{
+    margin: 0 auto 30px;
+    width: 80%;
+}
+.top_slider img{
+    height: auto;
+    width: 100%;
+}
+.top_slider li{
+  list-style: none;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+/* トップスライド ここまで＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+.btn_select_shop-wrap{
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 30px 0 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.btn_select_shop{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  width: 150px;
+  padding: 10px 0;
+  border: 2px solid #E44601;
+  color: #E44601;
+  background-color: #fff;
+  transition: all 0.3s ease-out;
+  display: block;
+}
+
+.btn_select_shop_selected{
+  color: #fff;
+  background-color: #E44601;
+  margin-bottom: 0 !important;
+}
+
+.btn_select_shop:hover{
+  color: #fff;
+  background-color: #E44601;
+}
+
+
+@media screen and (max-width: 768px) {
+  .top_bnr-inner{
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .btn_select_shop-wrap{
+    width: 150px;
+    display: block;
+  }
+  .btn_select_shop:first-child{
+    margin-bottom: 20px !important;
+  }
+}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+	<!-- <script src="js/menu.json"></script> -->
+	<script>
+var menu = [
+	// 1
+	{ "category": "定食",
+		"menu": [
+			{
+				"id": 1,
+				"title": "レバニラ炒め定食",
+				"discription": "特製ダレのボリューム満点レバニラ炒め定食",
+				"price": "960",
+				"top-img": "./img/menu-top/menu001-rebanirateisyoku.jpg"
+			},
+			{
+				"id": 2,
+				"title": "ホルモン定食",
+				"discription": "じっくり煮込んだ絶品ホルモン",
+				"price": "960",
+				"top-img": "./img/menu-top/menu002-horumonteisyoku.jpg"
+			},
+			{
+				"id": 3,
+				"title": "河ドラ定食",
+				"discription": "ご飯、そば、コロッケ、シュウマイが入った定食",
+				"price": "900",
+				"top-img": "./img/menu-top/menu003_2-kawadorateisyoku.jpg"
+			},
+			{
+				"id": 4,
+				"title": "肉野菜定食",
+				"discription": "たっぷり野菜の肉野菜炒め",
+				"price": "980",
+				"top-img": "./img/menu-top/menu004-nikuyasaiteisyoku.jpg"
+			},
+			{
+				"id": 5,
+				"title": "ミックスフライ定食",
+				"discription": "海老、いか、キスの3種のフライ",
+				"price": "900",
+				"top-img": "./img/menu-top/menu005-mixflyteishoku.jpg"
+			},
+			{
+				"id": 6,
+				"title": "中華定食",
+				"discription": "からあげ、春巻、酢豚が入った定食",
+				"price": "900",
+				"top-img": "./img/menu-top/menu006-chineseteisyoku.jpg"
+			},
+			{
+				"id": 7,
+				"title": "とんかつ定食",
+				"discription": "揚げたてさっくり大きなとんかつ",
+				"price": "1,080",
+				"top-img": "./img/menu-top/menu007-tonkatsuteisyoku.jpg"
+			},
+			{
+				"id": 8,
+				"title": "焼肉定食",
+				"discription": "野菜と豚肉のあつあつ鉄板焼き",
+				"price": "1,030",
+				"top-img": "./img/menu-top/menu008-yakinikuteisyoku.jpg"
+			},
+			{
+				"id": 9,
+				"title": "魚定食",
+				"discription": "大きな開きホッケの定食",
+				"price": "930",
+				"top-img": "./img/menu-top/menu009-sakanateisyoku.jpg"
+			},
+			{
+				"id": 10,
+				"title": "肉鍋定食(醤油)",
+				"discription": "具沢山一人鍋",
+				"price": "1,030",
+				"top-img": "./img/menu-top/menu010-nikunabeshoyuteisyoku.jpg"
+			},
+			{
+				"id": 11,
+				"title": "肉鍋定食(味噌)",
+				"discription": "具沢山一人鍋",
+				"price": "1,030",
+				"top-img": "./img/menu-top/menu011-nkunabemisoteisyoku.jpg"
+			},
+			{
+				"id": 12,
+				"title": "ハンバーグ定食",
+				"discription": "大きなデミグラスハンバーグ",
+				"price": "900",
+				"top-img": "./img/menu-top/menu012-hambugeteisyoku.jpg"
+			},
+			{
+				"id": 13,
+				"title": "天ぷら定食",
+				"discription": "野菜と海老の揚げたてさっくり天ぷら",
+				"price": "1,030",
+				"top-img": "./img/menu-top/menu013-tenpurateisyoku.jpg"
+			},
+			{
+				"id": 14,
+				"title": "鳥からあげ定食",
+				"discription": "ごろごろっと大きなジューシーからあげ",
+				"price": "1,080",
+				"top-img": "./img/menu-top/menu014-torikaraageteisyoku.jpg"
+			},
+			{
+				"id": 15,
+				"title": "お子様ランチ",
+				"discription": "",
+				"price": "730",
+				"top-img": "./img/menu-top/menu015-childrenslunch.jpg"
+			}
+		]
+	},
+	// 2
+	{ "category": "丼・カレー",
+		"menu": [
+			{
+				"id": 16,
+				"title": "チャーハン",
+				"discription": "",
+				"price": "700",
+				"top-img": "./img/menu-top/menu016-chahan.jpg"
+			},
+			{
+				"id": 17,
+				"title": "シーフードピラフ",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu017-seafoodpilaf.jpg"
+			},
+			{
+				"id": 18,
+				"title": "中華飯",
+				"discription": "",
+				"price": "730",
+				"top-img": "./img/menu-top/menu018-chukadon.jpg"
+			},
+			{
+				"id": 19,
+				"title": "天 重",
+				"discription": "",
+				"price": "980",
+				"top-img": "./img/menu-top/menu019-tenju.jpg"
+			},
+			{
+				"id": 20,
+				"title": "かつ重",
+				"discription": "",
+				"price": "800",
+				"top-img": "./img/menu-top/menu020-katsuju.jpg"
+			},
+			{
+				"id": 21,
+				"title": "親子重",
+				"discription": "",
+				"price": "730",
+				"top-img": "./img/menu-top/menu021-oyakodon.jpg"
+			},
+			{
+				"id": 22,
+				"title": "カレーライス",
+				"discription": "",
+				"price": "700",
+				"top-img": "./img/menu-top/menu022-carryrice.jpg"
+			},
+			{
+				"id": 23,
+				"title": "カツカレー",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu023-katsucarry.jpg"
+			},
+			{
+				"id": 24,
+				"title": "ハンバーグカレー",
+				"discription": "",
+				"price": "930",
+				"top-img": "./img/menu-top/menu024-hamburgcarry.jpg"
+			}
+		]
+	},
+	// 3
+	{ "category": "ラーメン",
+		"menu": [
+			{
+				"id": 25,
+				"title": "ラーメン",
+				"discription": "昔ながらのあっさりしょうゆらーめん",
+				"price": "550",
+				"top-img": "./img/menu-top/menu025-ramen.jpg"
+			},
+			{
+				"id": 26,
+				"title": "チャーシューメン",
+				"discription": "大きな自家製チャーシューのしょうゆらーめん",
+				"price": "850",
+				"top-img": "./img/menu-top/menu026-chasyumen.jpg"
+			},
+			{
+				"id": 27,
+				"title": "みそラーメン",
+				"discription": "野菜たっぷりみそらーめん",
+				"price": "780",
+				"top-img": "./img/menu-top/menu027-misoramen.jpg"
+			},
+			{
+				"id": 28,
+				"title": "とんからラーメン",
+				"discription": "しょうゆとんこつベースのピリ辛らーめん",
+				"price": "830",
+				"top-img": "./img/menu-top/menu028-tonkararamen.jpg"
+			},
+			{
+				"id": 29,
+				"title": "広東麺",
+				"discription": "海鮮入りあんかけしょうゆらーめん",
+				"price": "830",
+				"top-img": "./img/menu-top/menu029-kantonmen.jpg"
+			},
+			{
+				"id": 30,
+				"title": "五目ラーメン",
+				"discription": "野菜たっぷりあっさり塩らーめん",
+				"price": "780",
+				"top-img": "./img/menu-top/menu030-gomokuramen.jpg"
+			},
+			{
+				"id": 31,
+				"title": "刺激ラーメン",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu031-shigekiramen.jpg"
+			}
+		]
+	},
+	// 4
+	{ "category": "うどん・そば",
+		"menu": [
+			{
+				"id": 32,
+				"title": "かけうどん",
+				"discription": "",
+				"price": "500",
+				"top-img": "./img/menu-top/menu032-kakeudon.jpg"
+			},
+			{
+				"id": 33,
+				"title": "月見うどん",
+				"discription": "",
+				"price": "580",
+				"top-img": "./img/menu-top/menu033-tsukimiudon.jpg"
+			},
+			{
+				"id": 34,
+				"title": "肉うどん",
+				"discription": "",
+				"price": "730",
+				"top-img": "./img/menu-top/menu034-nikuudon.jpg"
+			},
+			{
+				"id": 35,
+				"title": "天ぷらうどん",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu035-tenpuraudon.jpg"
+			},
+			{
+				"id": 36,
+				"title": "焼きうどん",
+				"discription": "",
+				"price": "780",
+				"top-img": "./img/menu-top/menu036-yakiudon.jpg"
+			},
+			{
+				"id": 37,
+				"title": "かけそば",
+				"discription": "",
+				"price": "500",
+				"top-img": "./img/menu-top/menu037-kakesoba.jpg"
+			},
+			{
+				"id": 38,
+				"title": "月見そば",
+				"discription": "",
+				"price": "580",
+				"top-img": "./img/menu-top/menu038-tsukimisoba.jpg"
+			},
+			{
+				"id": 39,
+				"title": "肉そば",
+				"discription": "",
+				"price": "730",
+				"top-img": "./img/menu-top/menu039-nikusoba.jpg"
+			},
+			{
+				"id": 40,
+				"title": "天ぷらそば",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu040-tenpurasoba.jpg"
+			},
+			{
+				"id": 41,
+				"title": "焼そば",
+				"discription": "",
+				"price": "730",
+				"top-img": "./img/menu-top/menu041-yakisoba.jpg"
+			},
+			{
+				"id": 42,
+				"title": "ナポリタン",
+				"discription": "",
+				"price": "780",
+				"top-img": "./img/menu-top/menu042-naporitan.jpg"
+			},
+			{
+				"id": 43,
+				"title": "五目焼きそば",
+				"discription": "海鮮入りあんかけ焼きそば",
+				"price": "830",
+				"top-img": "./img/menu-top/menu043-gomokuyakisoba.jpg"
+			}
+		]
+	},
+	// 5
+	{ "category": "一品料理",
+		"menu": [
+			{
+				"id": 44,
+				"title": "天ぷら盛り合わせ",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu044-tenpuramori.jpg"
+			},
+			{
+				"id": 45,
+				"title": "鳥からあげ",
+				"discription": "",
+				"price": "880",
+				"top-img": "./img/menu-top/menu045-torikaraage"
+			},
+			{
+				"id": 46,
+				"title": "チャーシュー盛り",
+				"discription": "",
+				"price": "780",
+				"top-img": "./img/menu-top/menu046-chashumori.jpg"
+			},
+			{
+				"id": 47,
+				"title": "酢豚",
+				"discription": "",
+				"price": "830",
+				"top-img": "./img/menu-top/menu047-subuta.jpg"
+			},
+			{
+				"id": 48,
+				"title": "かつ玉",
+				"discription": "",
+				"price": "700",
+				"top-img": "./img/menu-top/menu048-katsutama.jpg"
+			},
+			{
+				"id": 49,
+				"title": "とん汁",
+				"discription": "",
+				"price": "550",
+				"top-img": "./img/menu-top/menu049-tonjiru.jpg"
+			},
+			{
+				"id": 50,
+				"title": "野菜サラダ",
+				"discription": "",
+				"price": "330",
+				"top-img": "./img/menu-top/menu050-yasaisalad.jpg"
+			},
+			{
+				"id": 51,
+				"title": "シューマイ",
+				"discription": "",
+				"price": "450",
+				"top-img": "./img/menu-top/menu051-shumai.jpg"
+			},
+			{
+				"id": 52,
+				"title": "自家製がっこ",
+				"discription": "",
+				"price": "350",
+				"top-img": "./img/menu-top/menu052-gakko.jpg"
+			},
+			{
+				"id": 53,
+				"title": "バリコロ焼き",
+				"discription": "",
+				"price": "630",
+				"top-img": "./img/menu-top/menu053-barikoroyaki.jpg"
+			},
+			{
+				"id": 54,
+				"title": "餃子",
+				"discription": "",
+				"price": "480",
+				"top-img": "./img/menu-top/menu009-sakanateisyoku.jpg"
+			}
+		]
+	},
+	// 6
+	// { "category": "ソフトクリーム",
+	// 	"menu": [
+	// 		{
+	// 			"id": 55,
+	// 			"title": "河ドラソフト",
+	// 			"discription": "",
+	// 			"price": "",
+	// 			"top-img": "./img/menu-top/menu054-gyoza.jpg"
+	// 		},
+	// 		{
+	// 			"id": 56,
+	// 			"title": "ジャムソフト",
+	// 			"discription": "",
+	// 			"price": "",
+	// 			"top-img": "./img/menu-top/menu002-horumonteisyoku.jpg"
+	// 		}
+	// 	]
+	// }
+	// 7
+	{ "category": "その他",
+		"menu": [
+			{
+				"id": 57,
+				"title": "おてもと",
+				"discription": "河ドラオリジナルお箸袋",
+				"price": "",
+				"topImg": "./img/menu-top/menu000-otemoto.jpg"
+			}
+		]
+	}
+]
+
+		$(document).ready(function(){
+			// $.getJSON('menu.json', function(menu) {
+
+				for (var i in menu) {
+					// var menuAttr = [ menu[i].menu.img ];
+					// var randImg = menuAttr[Math.floor(Math.random() * menuAttr.length)];
+					// $('#random').attr('src', randImg );
+
+					$('ul#menu-list').append('<li class="category-name"><strong>' + menu[i].category + '</strong><ul></ul></li>');
+					for ( var j in menu[i].menu) {
+						$('.category-name ul').append('<li>' + menu[i].menu[j].title + '(' + menu[i].menu[j].discription + ')<br />¥' + menu[i].menu[j].price);
+					}
+				}
+
+				for (var i in menu) {
+					for ( var j in menu[i].menu) {
+
+					}
+				}
+			// });
+		});
+	</script>
+</head>
+<body>
+	<img id="random" style="width:100%;" />
+	<ul id="menu-list">
+	</ul>
+	<!-- <script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script> -->
+</body>
+</html>
