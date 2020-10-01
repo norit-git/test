@@ -1,0 +1,1205 @@
+@charset "UTF-8";
+/***************変数セット**************/
+/*************************
+GENERAL
+**************************/
+html {
+  overflow: auto;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+body .width1280 {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Shinsei Kaisho CBSK1";
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/*************************
+HEADER
+**************************/
+.main_header {
+  margin: 0 -500%;
+  padding: 0 500%;
+  background: #E44601;
+  text-align: center;
+}
+
+.main_header .description {
+  padding: 10px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: none;
+}
+
+.main_header .site-title {
+  font-family: "Shinsei Kaisho CBSK1";
+  color: #fff;
+  height: 60px;
+  padding: 10px 0 0;
+  margin: 0;
+}
+
+.main_header .site-title small {
+  font-family: "Graduate", cursive;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.main_header .site-title img {
+  width: 233px;
+  margin-left: 20px;
+}
+
+.main_header .site-title img:hover {
+  opacity: .8;
+}
+
+.main_header .head-nav.pc-menu {
+  display: none;
+}
+
+.main_header .head-nav {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: none;
+}
+
+.main_header .head-nav ul {
+  width: 100%;
+  background-color: none;
+}
+
+.main_header .head-nav ul li {
+  height: 40px;
+  background: url("../img/wave.svg") repeat-x;
+  background-position: bottom;
+}
+
+.main_header .head-nav ul li:hover {
+  background-color: none;
+}
+
+.main_header .head-nav ul li .pure-menu-link {
+  color: #fff;
+  font-family: "Shinsei Kaisho CBSK1";
+  transition: color ease .2s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: none;
+}
+
+.main_header .head-nav ul li .pure-menu-link:hover {
+  color: #FFCB00;
+  background-color: transparent;
+}
+
+.main_header .head-nav.sp-menu {
+  position: relative;
+}
+
+.main_header .head-nav.sp-menu .pull-down-inner {
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.main_header .head-nav.sp-menu .pull-down-inner .menu-icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: -.5em auto;
+  cursor: pointer;
+}
+
+.main_header .head-nav.sp-menu .pull-down-inner .menu-icon .current {
+  opacity: .3;
+}
+
+.main_header .head-nav.sp-menu .pull-down-list li a {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #E44601;
+}
+
+.main_header .head-nav.sp-menu .pull-down-list li a::after {
+  font-family: 'FontAwesome';
+  content: "\f054";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -0.5em;
+}
+
+.main_header .head-nav.sp-menu .pull-down-list li:nth-child(odd) {
+  background-color: #fff;
+}
+
+.main_header .head-nav.sp-menu .pull-down-list li:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+.main_header .header-images {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .main_header {
+    padding-bottom: 0;
+  }
+  .main_header .description {
+    display: block;
+  }
+  .main_header .description br {
+    display: none;
+  }
+  .main_header .site-title {
+    margin: 10px 0 0;
+    padding: 0;
+  }
+  .main_header .head-nav.sp-menu {
+    display: none;
+  }
+  .main_header .head-nav.pc-menu {
+    display: block;
+  }
+  .main_header .head-nav.pc-menu ul {
+    position: relative;
+    width: 100%;
+  }
+  .main_header .head-nav.pc-menu ul li {
+    position: absolute;
+    top: -60px;
+    background: url("../img/wave.svg") repeat-x;
+    background-position: bottom;
+  }
+  .main_header .head-nav.pc-menu ul li a {
+    color: #fff;
+    padding: .5em 0;
+    font-size: 20px;
+    font-family: "Shinsei Kaisho CBSK1";
+  }
+  .main_header .head-nav.pc-menu ul li#normal {
+    width: 160px;
+  }
+  .main_header .head-nav.pc-menu ul li#long {
+    width: 200px;
+  }
+  .main_header .head-nav.pc-menu ul .head-nav-policy {
+    left: 70px;
+  }
+  .main_header .head-nav.pc-menu ul .head-nav-fmenu {
+    left: 240px;
+  }
+  .main_header .head-nav.pc-menu ul .head-nav-news {
+    right: 240px;
+  }
+  .main_header .head-nav.pc-menu ul .head-nav-info {
+    right: 70px;
+  }
+  .main_header .header-images {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .main_header .header-images img {
+    position: absolute;
+  }
+  .main_header .header-images .fifth-year {
+    width: 74px;
+    bottom: 20px;
+    right: 435px;
+  }
+  .main_header .header-images .mens {
+    width: 121px;
+    bottom: 60px;
+    right: 90px;
+  }
+  .main_header .header-images .womens {
+    width: 143px;
+    bottom: 60px;
+    left: 60px;
+  }
+  .main_header .header-images .kuma {
+    width: 88px;
+    bottom: 0;
+    left: 440px;
+  }
+  .kuma02 {
+    width: 105px;
+    bottom: 0;
+    /* left: 780px; */
+    right: 410px;
+  }
+  .kawadora-icon {
+    width: 50px;
+    bottom: 0;
+    /* left: 458px; */
+    right: 760px;
+    top:-87px;
+  }
+}
+
+/*************************
+TOP
+**************************/
+main .random-menu_container {
+  text-align: center;
+}
+
+main .random-menu_container .random-menu {
+  position: relative;
+  max-height: 260px;
+  overflow: hidden;
+}
+
+main .random-menu_container .random-menu a {
+  position: absolute;
+  transition: all .3s ease-out;
+  z-index: 1;
+  display: none;
+}
+
+main .random-menu_container .random-menu a.random-left {
+  top: 50%;
+  left: 0;
+}
+
+main .random-menu_container .random-menu a.random-left:hover {
+  left: -10px;
+}
+
+main .random-menu_container .random-menu a.random-right {
+  top: 50%;
+  right: 0;
+}
+
+main .random-menu_container .random-menu a.random-right:hover {
+  right: -10px;
+}
+
+main .random-menu_container .random-menu img {
+  width: 120%;
+  margin: 0 0 0 -35px;
+}
+
+main .section_container {
+  padding: 0 0 50px;
+}
+
+main .section_container h1, main .section_container h2 {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto 20px;
+  line-height: 1.7em;
+  font-size: 2em;
+  font-family: "Shinsei Kaisho CBSK1";
+  background: url("../img/h2wave.png") repeat-x;
+  background-size: 100%;
+  background-position: center center;
+}
+
+main .section_container h1 small, main .section_container h2 small {
+  font-family: "Graduate", cursive;
+  font-size: .8rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+main .section_container h1 {
+  background: url("../img/wave-orange.png") repeat-x;
+  background-position: center center;
+}
+
+main .section_container .menu {
+  width: 300px;
+}
+
+main .section_container .menu-takeout {
+  width: 350px;
+}
+
+main .section_container p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+main .section_container .GoTop a {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Graduate", cursive;
+  font-weight: thin;
+  line-height: 1.5em;
+  position: relative;
+  transition: all 3s ease-out;
+}
+
+main .section_container .GoTop a::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: -30px;
+  background: url("../img/gotop.png") no-repeat;
+  background-size: contain;
+  transition: all .2s ease-out;
+}
+
+main .section_container .GoTop a:hover::before {
+  top: -50px;
+}
+
+main .policy-cont {
+  margin: 0 -500%;
+  padding: 100px 500% 50px;
+  background: #E44601;
+  color: #fff;
+}
+
+main .policy-cont h2 {
+  position: relative;
+}
+
+main .policy-cont h2 ::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background: url("../img/man1.png") no-repeat;
+  background-size: 70px;
+  background-position: right;
+  height: 80px;
+  width: 75px;
+  bottom: 120px;
+  right: 115px;
+}
+
+main .policy-cont p {
+  font-weight: 300;
+  padding: 0 5%;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+main .policy-cont .images {
+  display: none;
+}
+
+main .menu-cont {
+  margin: 0 -500%;
+  padding: 30px 500%;
+  background: url("../img/bk-otemoto.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+
+main .menu-cont .woman1 {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+main .menu-cont h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+main .menu-cont .menu-link {
+  height: 100px;
+  text-align: center;
+}
+
+main .menu-cont .menu-link a {
+  display: block;
+  line-height: 100px;
+  position: relative;
+  font-size: 1.3em;
+  color: #fff;
+  text-indent: -25px;
+  font-family: "Shinsei Kaisho CBSK1";
+}
+
+main .menu-cont .menu-link a::after {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  display: block;
+  content: "";
+  margin: 0 25px 0 0;
+  width: 60px;
+  height: 40px;
+  background: url("../img/right-white.png") no-repeat left center;
+  transition: all ease .3s;
+}
+
+main .news-cont {
+  color: #E44601;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+main .news-cont .woman2 {
+  text-align: center;
+  width: 80px;
+  margin: 20px 0;
+}
+
+main .news-cont h2 {
+  margin: 0 auto 20px;
+  background: url("../img/wave-orange.png") repeat-x;
+  background-size: 100%;
+  background-position: center center;
+}
+
+main .news-cont ul {
+  list-style: none;
+  height: 330px;
+  overflow: auto;
+}
+
+main .news-cont ul .news-list {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #E44601;
+  line-height: 1.5em;
+  font-family: "Shinsei Kaisho CBSK1";
+  color: #E44601;
+}
+
+main .news-cont ul .news-list span {
+  font-family: "Graduate", cursive;
+  font-size: .8em;
+  font-weight: 300;
+}
+
+main .news-cont .fb-box {
+  text-align: center;
+}
+
+main .news-cont .pure-g, main .news-cont .pure-g-r {
+  margin-bottom: 100px;
+}
+
+main .news-cont .GoTop a {
+  color: #E44601;
+}
+
+main .news-cont .GoTop a::before {
+  background: url("../img/gotop-o.png") no-repeat;
+  background-size: contain;
+}
+
+main .service-cont {
+  margin: 0 -500%;
+  padding: 60px 500% 20px;
+  /* background: #FFCB00; */
+}
+
+main .service-cont .relative {
+  position: relative;
+}
+
+main .service-cont .relative h2 {
+  position: absolute;
+  width: auto;
+  padding-left: 30px;
+  top: -90px;
+  background: none;
+}
+
+main .service-cont .relative h2 img {
+  width: 100%;
+}
+
+main .service-cont .width1280 div {
+  text-align: center;
+  margin: 0 auto;
+}
+
+main .service-cont .width1280 div img {
+  max-width: 100%;
+  border: 10px solid #E44601;
+  border-radius: 5px;
+}
+
+main .info-cont {
+  color: #E44601;
+  background: url("../img/header-illust03.png") no-repeat;
+  background-position: right bottom;
+}
+
+main .info-cont h2 {
+  margin: 0 auto 50px;
+  background: url("../img/wave-orange.png") repeat-x;
+  background-size: 100%;
+  background-position: center center;
+}
+
+main .info-cont .pure-g, main .info-cont .pure-g-r {
+  margin-bottom: 50px;
+}
+
+main .info-cont .pure-g .pure-u-1-2:first-child table tr, main .info-cont .pure-g-r .pure-u-1-2:first-child table tr {
+  width: 105px;
+  font-family: "Shinsei Kaisho CBSK1";
+  text-align: left;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+main .info-cont .pure-g .pure-u-1-2:nth-child(2), main .info-cont .pure-g-r .pure-u-1-2:nth-child(2) {
+  text-align: center;
+}
+
+main .info-cont .pure-g .pure-u-1-2:nth-child(2) img, main .info-cont .pure-g-r .pure-u-1-2:nth-child(2) img {
+  width: 100%;
+}
+
+main .g-map {
+  height: 400px;
+  width: 100%;
+  margin: 0 -200% 100px;
+  padding: 0 200%;
+}
+
+main .foot-cont .GoTop a {
+  color: #E44601;
+}
+
+main .foot-cont .GoTop a::before {
+  background: url("../img/gotop-o.png") no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-width: 500px) {
+  main .random-menu_container {
+    text-align: center;
+  }
+  main .random-menu_container .random-menu {
+    position: relative;
+    max-height: 770px;
+  }
+  main .random-menu_container .random-menu a {
+    position: absolute;
+    transition: all .3s ease-out;
+    z-index: 1;
+    display: block;
+  }
+  main .random-menu_container .random-menu a.random-left {
+    top: 50%;
+    left: 25px;
+  }
+  main .random-menu_container .random-menu a.random-left:hover {
+    left: 0px;
+  }
+  main .random-menu_container .random-menu a.random-right {
+    top: 50%;
+    right: 25px;
+  }
+  main .random-menu_container .random-menu a.random-right:hover {
+    right: 0px;
+  }
+  main .random-menu_container .random-menu img {
+    width: 100%;
+    margin: 0;
+  }
+  main .section_container {
+    padding: 50px 0;
+  }
+  main .section_container h2 {
+    margin: 0 auto 20px;
+  }
+  main .section_container .pure-g .pure-u-1-2 {
+    width: 40%;
+    padding: 0 5%;
+  }
+  main .policy-cont {
+    padding: 50px 500%;
+  }
+  main .policy-cont p {
+    line-height: 3em;
+    font-weight: 400;
+    text-align: center;
+  }
+  main .policy-cont p strong {
+    font-size: 1.5em;
+  }
+  main .policy-cont .images {
+    display: block;
+    position: relative;
+  }
+  main .policy-cont .images img {
+    position: absolute;
+    display: block;
+    width: 400px;
+  }
+  main .policy-cont .images .bk1 {
+    right: -120px;
+    top: 0;
+  }
+  main .policy-cont .images .bk2 {
+    left: -200px;
+    top: 360px;
+  }
+  main .policy-cont h2 small::after {
+    background-size: 90px;
+    height: 120px;
+    width: 90px;
+    bottom: 0;
+    right: -110px;
+  }
+  main .menu-cont .menu-link {
+    margin: 0 450px;
+  }
+  main .menu-cont .menu-link a:hover {
+    background-color: rgba(228, 70, 1, 0.55);
+    border-radius: 50px;
+  }
+  main .menu-cont .menu-link a:hover::after {
+    right: -10px;
+  }
+  main .menu-cont .woman1 {
+    width: 130px;
+    margin-bottom: 20px;
+  }
+  main .news-cont {
+    text-align: left;
+    margin-bottom: 90px;
+  }
+  main .news-cont .woman2 {
+    display: none;
+  }
+  main .news-cont .fb-box iframe {
+    width: 100%;
+  }
+  main .news-cont h2 {
+    margin: 0 0 20px;
+  }
+  main .service-cont {
+    padding-top: 0;
+  }
+  main .service-cont .relative {
+    height: 140px;
+  }
+  main .service-cont .relative h2 {
+    padding-left: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  main .service-cont .relative h2 img {
+    width: 730px;
+  }
+  main .service-cont .pure-u-1-2 {
+    width: 100%;
+  }
+  main .info-cont .pure-g .pure-u-1-2 {
+    width: 46%;
+    padding: 0 2%;
+  }
+  main .info-cont .pure-g .pure-u-1-2:first-child table tbody tr {
+    line-height: 2.5em;
+  }
+  main .info-cont .pure-g .pure-u-1-2:first-child table tbody tr th {
+    width: 105px;
+    font-size: 1.6em;
+  }
+  main .info-cont .pure-g .pure-u-1-2:first-child table tbody tr td {
+    font-size: 1.6em;
+  }
+  main .info-cont .pure-g .pure-u-1-2:nth-child(2) img {
+    width: 300px;
+  }
+  main .info-cont h2 {
+    margin: 0 0 20px;
+  }
+  main .gw-info {
+    background-color: #ffcb00;
+    padding-bottom: 30px;
+    margin: 30px 0px 30px 0px;
+    border-radius: 10px;
+  }
+  main .gw-info h3 {
+    padding: 20px 0px 10px 0px;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  main .gw-info p {
+    line-height: 1.5em;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  main .catering-info {
+    margin-bottom: 30px;
+  }
+  main .catering-info br.catering-br {
+    display: none;
+  }
+  main .catering-info p {
+    line-height: 1em;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  main p.catering {
+    text-align: center;
+    font-weight: bold;
+    color: #E44601;
+    font-size: 20px;
+  }
+  main li.catering-text {
+    float: left;
+    margin-top: 10px;
+  }
+  main .catering-text p {
+    font-size: 22px;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+  main p.catering-title {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 22px;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  main p.catering-category {
+    display: inline;
+    border: 2px solid #333;
+    border-radius: 2px;
+    width: auto;
+    padding: 10px 30px;
+    font-size: 35px;
+  }
+  main p.catering-price {
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: right;
+  }
+  main p.catering-price small {
+    font-size: 17px;
+  }
+  main .menu-cate {
+    margin-top: 85px;
+  }
+  main .menu-cate li.menu-list-cate {
+    float: left;
+    width: 50%;
+  }
+  main .menu-cate li.menu-list-cate img {
+    width: 100%;
+  }
+  main .menu-cate li.catering-text {
+    float: right;
+    width: 50%;
+  }
+  main hr.category-hr {
+    margin-bottom: 100px;
+  }
+  main a.overwhite:hover img {
+    opacity: 0.9;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha(opacity=70)";
+  }
+  main .image-tile img {
+    margin-right: -6px;
+    margin-left: 1%;
+    width: 19%;
+    margin-bottom: 7px;
+  }
+  main h2.news-title {
+    width: 100%;
+  }
+  main .image-center {
+    width: 60%;
+    display: block;
+    margin: 50px auto 0px auto;
+  }
+  main h4.info-date {
+    margin-left: 30px;
+  }
+  main .link-color a {
+    color: #E44601;
+  }
+  main .link-color a:hover {
+    color: #ffffff;
+    background-color: #E44601;
+  }
+  main .bnr-margin img {
+    margin-top: 25px;
+    margin-bottom: -20px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  main .section_container .width1280 .pure-u-1-1 p {
+    margin: 0;
+  }
+  main .news-cont .pure-g {
+    margin-bottom: 50px;
+  }
+  main .news-cont h2 {
+    margin: 0 auto 20px;
+  }
+  main .news-cont ul {
+    height: auto;
+    max-height: 330px;
+  }
+  main .menu-cont .menu-link {
+    height: 50px;
+  }
+  main .menu-cont .menu-link a {
+    line-height: 50px;
+  }
+  main .menu-cont .menu-link a::after {
+    right: -40px;
+    top: 7px;
+  }
+  main .menu-cont .menu-link a:hover::after {
+    right: -40px;
+  }
+  main .service-cont .width1280 div img {
+    max-width: 90%;
+  }
+  main .pure-g .pure-u-1-2 {
+    float: none;
+    width: 90%;
+    margin: 0 auto 50px;
+  }
+  main .pure-g .pure-u-1-2 ul .news-list {
+    text-align: left;
+  }
+  main .pure-g .fb-box {
+    width: 100%;
+  }
+  main .gw-info {
+    background-color: #ffcb00;
+    padding-bottom: 30px;
+    margin: 10px 0px 30px 0px;
+    border-radius: 10px;
+  }
+  main .gw-info h3 {
+    padding: 20px 0px 10px 0px;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  main .gw-info p {
+    line-height: 1.5em;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  main .catering-info {
+    margin-bottom: 30px;
+    margin-bottom: -10px;
+  }
+  main .catering-info p {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: left;
+  }
+  main p.catering {
+    text-align: left;
+    font-weight: bold;
+    color: #E44601;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  main li.catering-text {
+    float: left;
+    margin-top: 10px;
+  }
+  main .catering-text p {
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 1.4;
+  }
+  main p.catering-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  main p.catering-category {
+    display: inline;
+    border: 2px solid #333;
+    border-radius: 2px;
+    width: auto;
+    padding: 10px 30px;
+    font-size: 24px;
+  }
+  main p.catering-price {
+    font-size: 20px;
+    text-align: right;
+  }
+  main p.catering-price small {
+    font-size: 12px;
+  }
+  main .menu-cate {
+    margin-top: 20px;
+  }
+  main .menu-cate li.menu-list-cate {
+    float: left;
+    width: 100%;
+  }
+  main .menu-cate li.menu-list-cate img {
+    width: 100%;
+  }
+  main .menu-cate li.catering-text {
+    float: right;
+    width: 100%;
+  }
+  main hr.category-hr {
+    margin-bottom: 35px;
+  }
+  main h1.catering-sp {
+    margin-bottom: 0px;
+  }
+  main a.catering-sp {
+    margin-top: 11px;
+  }
+  main .image-tile img {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  main h2.news-title {
+    width: 100%;
+    font-size: 20px;
+  }
+  main .image-center {
+    width: 100%;
+  }
+  main .info-date {
+    margin: 10px 0 10px 20px;
+  }
+}
+
+.link-color a {
+  color: #E44601;
+}
+
+.bnr-margin img {
+  margin-top: 10px;
+}
+
+.bnr-first img {
+  margin-top: -40px;
+}
+
+/*************************
+FOOTER
+**************************/
+footer {
+  text-align: center;
+  margin: 0 -500%;
+  padding: 0 500%;
+  background: #E44601;
+  height: 100px;
+  padding-top: 10px;
+}
+
+footer small {
+  color: #fff;
+  font-family: "Shinsei Kaisho CBSK1";
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+
+footer p {
+  color: #fff;
+  margin-top: 10px;
+}
+
+/*************************
+MENU
+**************************/
+.page-menu::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.page-menu .page-name {
+  background-image: url("../img/wave-black.png");
+}
+
+.page-menu .category-box {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-menu .category-box h2 {
+  display: inline;
+  border: 2px solid #333;
+  border-radius: 2px;
+  width: auto;
+  padding: 10px 30px;
+  font-size: 25px;
+}
+
+.page-menu .category-box .main_menu-box {
+  margin: 20px auto 0;
+  list-style: none;
+}
+
+.page-menu .category-box .main_menu-box .menu-list {
+  float: left;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  font-family: "Shinsei Kaisho CBSK1";
+}
+
+.page-menu .category-box .main_menu-box .menu-list img {
+  width: 100%;
+}
+
+.page-menu .category-box .main_menu-box .menu-list .caption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+.page-menu .category-box .main_menu-box .menu-list .caption-name-long {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+.page-menu .category-box .main_menu-box .menu-list .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.page-menu .category-box .main_menu-box .menu-list:hover .mask {
+  opacity: 1;
+  padding-top: 70px;
+}
+
+.remodal {
+  max-width: none;
+  width: auto;
+  background-color: transparent;
+}
+
+.remodal img {
+  width: 100%;
+}
+
+.remodal p {
+  margin-top: 20px;
+  color: #fff;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 500px) {
+  .page-menu .category-box .main_menu-box .menu-list {
+    width: 21%;
+    padding: 0 2%;
+  }
+  .remodal {
+    max-width: none;
+    width: auto;
+    background-color: transparent;
+  }
+  .remodal img {
+    width: 100%;
+  }
+  .remodal p {
+    margin-top: 20px;
+    color: #fff;
+    text-align: left;
+    line-height: 1.5em;
+  }
+}
+
+
+/* 4月5日追加＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.pc-display{
+  display: block;
+}
+.sp-display{
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .pc-display{
+    display: none;
+  }
+  .sp-display{
+    display: block;
+  }
+}
+
+/* 4月20日追加＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.top_info-wrap{
+  width: 100%;
+}
+.top_info-wrap > img{
+  width: 96%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
